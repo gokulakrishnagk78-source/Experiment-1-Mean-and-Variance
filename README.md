@@ -1,4 +1,8 @@
 # Experiment-1-Mean-and-Variance
+NAME : GOKULAKRISHNA S 
+REG.NO : 25018150
+SLOT NO : 3P1-1 
+
 # Aim: 
 To find mean and variance of arrival objects from the feeder using probability distribution.
 
@@ -46,15 +50,50 @@ It is calculated as:
 
 
 # Program: 
+import numpy as np
 
+# Input: Enter the number of arrivals separated by space
+L = [int(i) for i in input("Enter arrival data: ").split()]
 
+N = len(L)
+M = max(L)
+x = []
+f = []
 
+# Counting frequency of each arrival
+for i in range(M + 1):
+    c = 0
+    for j in range(N):
+        if L[j] == i:
+            c += 1
+    f.append(c)
+    x.append(i)
 
+sf = np.sum(f)
 
+# Calculating probability for each occurrence
+p = [f[i] / sf for i in range(M + 1)]
 
+# Mean of arrival (expected value)
+mean = np.inner(x, p)
+
+# Second moment (E[X²])
+EX2 = np.inner(np.square(x), p)
+
+# Variance and standard deviation
+var = EX2 - mean**2
+SD = np.sqrt(var)
+
+print(f"The Mean arrival rate is {mean:.3f}")
+print(f"The Variance of arrival from feeder is {var:.3f}")
+print(f"The Standard deviation of arrival from feeder is {SD:.3f}")
+
+{https://colab.research.google.com/drive/1ZR3zKFK63DgMqrhINh2acs90xb-K9jFO?usp=sharing}
 
 
 # Output:
+
+![Screenshot_17-11-2025_14619_colab research google com](https://github.com/user-attachments/assets/2a5c763b-6f88-4cda-a318-39ce230ce34b)
 
 
 
