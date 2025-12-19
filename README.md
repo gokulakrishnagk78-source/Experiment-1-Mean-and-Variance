@@ -1,7 +1,5 @@
 # Experiment-1-Mean-and-Variance
-NAME : GOKULAKRISHNA S 
-REG NO : 25018150
-SLOT NO : 3P1-1
+
 # Aim: 
 To find mean and variance of arrival objects from the feeder using probability distribution.
 
@@ -49,6 +47,11 @@ It is calculated as:
 
 
 # Program: 
+NAME : GOKULAKRISHNA S 
+REG NO : 25018150
+SLOT NO : 3P1-1
+```
+
 import numpy as np
 
 # Input: Enter the number of arrivals separated by space
@@ -87,7 +90,7 @@ print(f"The Mean arrival rate is {mean:.3f}")
 print(f"The Variance of arrival from feeder is {var:.3f}")
 print(f"The Standard deviation of arrival from feeder is {SD:.3f}")
 
-
+```
 
 https://colab.research.google.com/drive/1ZR3zKFK63DgMqrhINh2acs90xb-K9jFO?usp=sharing
 
